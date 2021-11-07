@@ -13,7 +13,6 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/sigstore/cosign/pkg/cosign"
 	"github.com/sigstore/cosign/pkg/cosign/fulcio"
-	ociremote "github.com/sigstore/cosign/pkg/oci/remote"
 )
 
 // RegistryOptions is the wrapper for the registry options.
