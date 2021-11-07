@@ -1,2 +1,2 @@
-{ "input": { "image": "gcr.io/developerguy-311909/ubuntu:unsigned"} }
+{ "input": { "image": "registry.gitlab.com/soi-beta/external-images/velero:v1.7.0"} }
 
