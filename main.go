@@ -15,13 +15,6 @@ import (
 	"github.com/sigstore/cosign/pkg/cosign/fulcio"
 )
 
-// RegistryOptions is the wrapper for the registry options.
-type RegistryOptions struct {
-	AllowInsecure      bool
-	KubernetesKeychain bool
-	RefOpts            ReferenceOptions
-}
-
 type ImageVerificationReq struct {
 	Image string
 }
