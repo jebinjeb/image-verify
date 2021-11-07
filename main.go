@@ -96,17 +96,3 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
-func (o *RegistryOptions) ClientOpts(ctx context.Context) ([]ociremote.Option, error) {
-	opts := []ociremote.Option{ociremote.WithRemoteOptions(o.GetRegistryClientOpts(ctx)...)}
-	if o.RefOpts.TagPrefix != "" {
-		opts = append(opts, ociremote.WithPrefix(o.RefOpts.TagPrefix))
-	}
-	targetRepoOverride, err := ociremote.GetEnvTargetRepository()
-	if err != nil {
-		return nil, err
-	}
-	if (targetRepoOverride != name.Repository{}) {
-		opts = append(opts, ociremote.WithTargetRepository(targetRepoOverride))
-	}
-	return opts, nil
-}
